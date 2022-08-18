@@ -1,0 +1,234 @@
+/* background */
+/* display */
+/* font */
+/* border, padding, margin */
+/* height, width */
+/* etc */
+
+/* 영화 상세 정보 설명 팝업창 */
+
+.container--detail {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: var(--font--family1), sans-serif;
+  color: rgb(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  z-index: 3;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 12px;
+}
+
+.detail--background {
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+
+  border-radius: 1rem;
+  padding: 2rem;
+
+  width: 84rem;
+  height: 48rem;
+
+  box-sizing: border-box;
+}
+
+/* 영화 포스터 출력 칸 */
+
+.detail--background__L {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+
+  margin-right: auto;
+
+  border: none;
+}
+
+.detail--background__L img {
+  max-width: 24rem;
+
+  border-radius: 3px;
+}
+
+/* 영화 상세 정보 칸 */
+
+.detail--background__R {
+  display: flex;
+  flex-direction: column;
+
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+
+  border: none;
+  margin: 1rem auto auto 1rem;
+
+  height: 43rem;
+  width: 51rem;
+}
+
+.detail--background__R > h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  
+
+  margin: 0.5rem 0;
+}
+
+.detail--background__R > h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  color: rgb(0, 0, 0);
+
+  margin: 0.5rem 0;
+}
+
+.detail--background__R ul {
+  padding: 0;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.detail--background__R li {
+  font-weight: bold;
+  text-align: left;
+  color: rgb(0, 0, 0);
+
+  padding-right: 1rem;
+  margin: 0;
+
+  float: left;
+}
+
+.detail--background__R span {
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+
+  margin: 0.5rem 0;
+  margin-right: 0.5rem;
+}
+
+.detail--background__R div > div {
+  text-align: left;
+  color: rgb(0, 0, 0);
+
+  margin: 0.5rem 0;
+}
+
+.detail--background__R dl {
+  margin: 0;
+}
+
+.detail--background__R dt {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(0, 0, 0);
+
+  margin: 1rem 0;
+}
+
+.detail--background__R dd {
+  text-align: left;
+  font-weight: lighter;
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+
+  margin: 0.5rem 0;
+  margin-right: 0.5rem;
+}
+
+.detail--background__R button {
+  background-color: rgb(144, 80, 157);
+
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+
+  border: 1px solid rgb(173, 132, 178);
+  border-radius: 3px;
+
+  padding: 0.3rem 1rem;
+
+  margin-top: auto;
+  margin-left: auto;
+  transition: ease 0.2s;
+  cursor: pointer;
+}
+
+.detail--background__R button:hover {
+  background-color: rgb(173, 132, 178);
+
+  transform: scale(1.05) perspective(1px);
+  transition: ease 0.2s;
+}
+
+/* 페이지 로딩 관련 css (퍼옴..) */
+.detail--loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  transform: translateX(21vw);
+}
+
+.detail--loading__loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 3em;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.detail--loading__loader,
+.detail--loading__loader:before,
+.detail--loading__loader:after {
+  animation: 1s infinite ease-in-out;
+}
+.detail--loading__loader:before,
+.detail--loading__loader:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader__anim:before,
+.loader__anim:after {
+  content: "";
+  background-color: #333;
+  transform: scale(0);
+  animation: loaderAnim 1.5s infinite ease-in-out;
+}
+.loader__anim:after {
+  animation-delay: 0.75s;
+}
+
+@keyframes loaderAnim {
+  0% {
+    transform: translateX(-100%) scale(0);
+  }
+  50% {
+    transform: translateX(0%) scale(1);
+  }
+  100% {
+    transform: translateX(100%) scale(0);
+  }
+}

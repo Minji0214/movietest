@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* background */
+/* display */
+/* font */
+/* margin, padding, border */
+/* width, height */
+/* etc */
+
+* {
+  font-size: 12px;
+  color: var(--font--color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.container > img {
+  display: flex;
+  height: 4rem;
+
+  position: absolute;
+  margin-top:1.6rem;
+
+  z-index: 3;
+}
+
+.container--body {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  margin: auto;
+}
+
+.container--body--Slideshow {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Slideshow__Slideshowshadow {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  z-index: 1;
+}
+
+.Slideshow__Slider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+
+  margin: 0;
+}
+
+.Slideshow__Slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: inline-block;
+
+  margin: 0;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.container--body--context {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  margin-top: 6rem;
+  z-index: 2;
+}
+
+.context__header {
+  font-size: 4rem;
+
+  font-weight: 700;
+}
+
+.context__paragraph {
+  font-size: 2.7rem;
+  line-height: 4rem;
+
+  white-space: pre-wrap;
+}
+
+.context__btn {
+  background-color: var(--button--bgcolor);
+  font-family: var(--font--family3);
+  font-size: 3rem;
+
+  border: 1px solid var(--button--bordercolor);
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+  margin: 8rem;
+
+  cursor: pointer;
+}
+
+.context__btn {
+  background-color: var(--button--bgcolor);
+
+  font-size: 3rem;
+
+  border: 1px solid var(--button--bordercolor);
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+  margin: 8rem;
+
+  transition: ease 0.2s;
+}
+
+.context__btn:hover {
+  background-color: rgb(173, 132, 178);
+
+  transform: scale(1.05) perspective(1px);
+  transition: ease 0.2s;
+}
